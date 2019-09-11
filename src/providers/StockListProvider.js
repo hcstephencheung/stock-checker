@@ -10,20 +10,27 @@ export const getStocks = () => {
     return ['abc', 'def'];
 };
 
-export const fetchCompanyDescriptoin = async symbol => {
+const fetchCompanyDescription = async (symbol, setDescription, setDescriptionLoading) => {
     const pathname = `stable/stock/${symbol}/company`;
     const endpointUrl = new URL(pathname, hostname);
     endpointUrl.searchParams.set("token", secret);
 
-    try {
-        const response = await axios.get(endpointUrl);
-        const { description } = await response.data;
+    const response = await fetch(endpointUrl);
+    const data = await response.json();
+    const { description } = data;
+    setDescription(description);
+    setDescriptionLoading(false);
+};
 
-        return description;
-    } catch (e) {
-        console.log(e);
-        return;
-    }
+export const useFetchCompanyDescription = symbol => {
+    const [description, setDescription] = useState(null);
+    const [descriptionLoading, setDescriptionLoading] = useState(true);
+
+    useEffect(() => {
+        fetchCompanyDescription(symbol, setDescription, setDescriptionLoading);
+    }, [symbol]);
+
+    return {description, descriptionLoading};
 };
 
 const fetchPriceFromSymbol = async (symbol, setPrice, setPriceLoading) => {
@@ -44,7 +51,7 @@ export const useFetchPriceFromSymbol = symbol => {
 
     useEffect(() => {
         fetchPriceFromSymbol(symbol, setPrice, setPriceLoading);
-    }, []);
+    }, [symbol]);
 
     return {price, priceLoading};
 };
