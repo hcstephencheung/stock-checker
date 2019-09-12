@@ -24,6 +24,9 @@ To run the project:
 1. In the root of the project directory, please run `npm i` and `npm start` after everything is installed.
 2. Running `npm start` should open your browser with a new `localhost:1234` tab!
 
+If there are any confusion, here's my folder structure:
+![ProjectStructure](folder-structure.png)
+
 ## Project Architecture and Approaches
 
 I chose a project structure close to what I'm currently using at work since it's been working really well. The only questionable folder is
