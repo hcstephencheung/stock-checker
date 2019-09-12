@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StockCheckerPage should render with skeletons 1`] = `
+"<section className={[undefined]}>
+  <StockDropdown isLoading={true} symbols={{...}} selectedSymbol=\\"AAPL\\" handleChange={[Function: handleStockChange]} />
+  <Price isLoading={true} title=\\"Current Stock Price\\" price={{...}} currency=\\"USD\\" />
+  <ContentBlock isLoading={true} content={{...}} title=\\"Description\\" />
+</section>"
+`;
