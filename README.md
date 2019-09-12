@@ -25,7 +25,7 @@ To run the project:
 2. Running `npm start` should open your browser with a new `localhost:1234` tab!
 
 If there are any confusion, here's my folder structure:
-![ProjectStructure](folder-structure.png)
+![ProjectStructure](folder-structure.PNG)
 
 ## Project Architecture and Approaches
 
