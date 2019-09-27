@@ -1,14 +1,3 @@
-# Hi Lendesk!
-
-First off, thank you for taking the time in reviewing the project. Interviewing is time consuming for both parties so I appreciate the time.
-
-To begin, please read the following:
-
-1. How to run
-2. Project architecture and approaches
-3. Dependencies, Tooling, Frameworks
-4. Notes
-
 ## How to run
 
 Before you start:
@@ -67,19 +56,3 @@ package dependencies (ie. global components -> project components -> local page 
 ### ESLint
 It came with Parcel, no particular reason here. Most linters are the same I find, as long as everyone is onboard then I have no
 preference.
-
-## Notes
-
-1. I noticed that when I ran `npm audit` there was 1 package with vulnerability. I understand that Lendesk is a Fintech company and this 
-might cause some concern in a real work environment, so if given more time I would pay attention to that as well. The npm packages I
-chose to explicitly use are the major ones with MIT licenses and lots of downnloads.
-
-2. I .gitignored a couple files, so hopefully this will still be ok. If the project doesn't run or anything doesn't work, please feel
-free to let me know!
-
-
-I gave a lot of thought into this assignment, I hope it wasn't too much to review! Hope to hear from you guys soon!
-
-Cheers,
-
-Stephen
